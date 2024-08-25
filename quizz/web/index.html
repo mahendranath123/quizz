@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: black;
+        }
+        nav {
+            background-color: #4B0052;
+            overflow: hidden;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 8px 12px;
+        }
+        nav a:hover {
+            background-color: #682A6A;
+        }
+        .hero {
+            width: 100%;
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .buttons .signup-btn {
+            background-color: #6a1b9a;
+            color: white;
+        }
+        .buttons .signup-btn:hover {
+            background-color: #4b0082;
+        }
+        .buttons .learnmore-btn {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        .buttons .learnmore-btn:hover {
+            background-color: #ccc;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            margin-top: 80px;
+        }
+        .content h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .animation-section {
+            padding: 2rem;
+            text-align: center;
+            background-color: #FFFFFF;
+            margin-top: 50px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .animation-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .animation-section .animations {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .animation-section .animation-item {
+            width: 30%;
+            margin: 10px;
+        }
+        .animation-section .animation-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .animation-section .animation-item img:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .footer .footer-section {
+            flex: 1;
+            padding: 10px;
+        }
+        .footer .footer-bottom {
+            background: #222;
+            color: #aaa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .footer .footer-section h2 {
+            margin-bottom: 15px;
+        }
+        .footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer .footer-section ul li a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .footer .footer-section ul li a:hover {
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">Quizz</a>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sign.jsp">Sign up</a></li>
+            <li><a href="login.jsp">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome to Quizz</h1>
+        <p>Engaging quizzes to make learning fun and effective. Join us today to start your journey!</p>
+        <div class="buttons">
+            <a href="sign.jsp" class="signup-btn">Sign up</a>
+            <a href="learn.html" class="learnmore-btn">Learn more</a>
+        </div>
+        <img src="download (2).png" alt="Quizizz Animation">
+    </div>
+
+    <div class="animation-section">
+        <h2>Our Quizzes</h2>
+        <div class="animations">
+            <div class="animation-item">
+                <img src="science.avif" alt="Quiz 1">
+            </div>
+            <div class="animation-item">
+                <img src="math.avif" alt="Quiz 2">
+            </div>
+            <div class="animation-item">
+                <img src="finance.avif" alt="Quiz 3">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Quizz is an innovative platform designed to enhance learning through engaging quizzes. Our mission is to make learning fun and effective for everyone.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: support@quizz.com</p>
+                <p>Phone: +123-456-7890</p>
+                <p>Address: 123 Learning Street, Quiz City, QC 12345</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Quizz | Designed by Quizz Team
+        </div>
+    </footer>
+</body>
+</html>

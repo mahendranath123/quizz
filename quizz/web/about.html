@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About the Founders - Quizz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: #4B0052;
+            overflow: hidden;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 8px 12px;
+        }
+        nav a:hover {
+            background-color: #682A6A;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            margin-top: 80px; /* Height of the navbar */
+        }
+        .content h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #4B0052;
+            margin-bottom: 1rem;
+        }
+        .founder-profile {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .founder-profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .founder-profile .details {
+            max-width: 500px;
+        }
+        .founder-profile .details h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .founder-profile .details p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .founder-profile .details a {
+            color: #4B0052;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .founder-profile .details a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer .footer-content {
+            display: flex;
+           justify-content: space-around;
+          padding: 20px;
+        }
+
+        .footer .footer-section {
+           flex: 1;
+           padding: 10px;
+        }
+
+        .footer .footer-bottom {
+          background: #222;
+           color: #aaa;
+          padding: 10px 0;
+           text-align: center;
+        }
+
+        .footer .footer-section h2 {
+           margin-bottom: 15px;
+        }
+
+        .footer .footer-section ul {
+        list-style: none;
+        padding: 0;
+            }
+
+        .footer .footer-section ul li {
+        margin-bottom: 10px;
+        }
+
+        .footer .footer-section ul li a {
+         color: #bbb;
+         text-decoration: none;
+        }
+
+         .footer .footer-section ul li a:hover {
+          color: #fff;
+        }
+        .social-media {
+            margin: 10px 0;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #FFD700;
+            display: inline-block;
+        }
+        .social-media a img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        .social-media a:hover img {
+            filter: brightness(0.8);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('a[href="#contact"]').addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Quizz</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="sign.jsp">Signup</a></li>
+            <li><a href="login.jsp">Login</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>About the Founders</h1>
+        <h2>Meet the Visionaries Behind Quizz</h2>
+        
+        <div class="founder-profile">
+            <img src="founder1.jpg" alt="Founder 1">
+            <div class="details">
+                <h3>John Doe</h3>
+                <p>John Doe is the CEO and co-founder of Quizz. With a background in education technology, John is passionate about making learning accessible and fun for everyone.</p>
+                
+            </div>
+        </div>
+        
+        <div class="founder-profile">
+            <img src="founder2.jpg" alt="Founder 2">
+            <div class="details">
+                <h3>Jane Smith</h3>
+                <p>Jane Smith is the CTO and co-founder of Quizz. With extensive experience in software development, Jane leads the technical team to build innovative solutions for modern education.</p>
+                
+            </div>
+        </div>
+
+    </div>
+   <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>We offer a wide range of Titan watch's. Our mission is to provide quality products with excellent customer service.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="Home.aspx">Home</a></li>
+                        <li><a href="About.aspx">About</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                        <li><a href="Privacy.aspx">Privacy Policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: info@titanwatch.com</p>
+                    <p>Phone: +123-456-7890</p>
+                    <p>Address: 123 Shoe Street, Titan City, TS 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 TitanWatch | Designed by Titan Watch Team
+            </div>
+        </footer>
+</body>
+</html>

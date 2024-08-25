@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: #4B0052;
+            overflow: hidden;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #682A6A;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            margin-top: 80px;
+        }
+        .content h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .buttons .signup-btn {
+            background-color: #6a1b9a;
+            color: white;
+        }
+        .buttons .signup-btn:hover {
+            background-color: #4b0082;
+            transform: scale(1.05);
+        }
+        .buttons .learnmore-btn {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        .buttons .learnmore-btn:hover {
+            background-color: #ccc;
+            transform: scale(1.05);
+        }
+        .learn-more {
+            padding: 2rem;
+            background-color: #E6E6FA; 
+            text-align: left;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .learn-more h2 {
+            color: #4B0052;
+            margin-bottom: 1rem;
+        }
+        .learn-more p {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .learn-more .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .learn-more img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .learn-more img:hover {
+            transform: scale(1.05);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .feature {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 48%;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: #4B0052;
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-media {
+            margin: 10px 0;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #FFD700;
+            display: inline-block;
+        }
+        .social-media a img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        .social-media a:hover img {
+            filter: brightness(0.8);
+        }
+        
+        .learn-more img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        }
+
+        .learn-more img:hover {
+            transform: scale(1.05); 
+        }
+
+    </style>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('a[href="#contact"]').addEventListener("click", function(e) {
+                e.preventDefault();
+                document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">Quizz</a>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="sign.jsp">Signup</a></li>
+            <li><a href="login.jsp">Login</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Test your limits, expand your mind.</h1>
+        <p>Deliver instruction that's relevant for every student</p>
+        <div class="buttons">
+            <a href="sign.jsp" class="signup-btn">Sign up for free</a>
+            <a href="#learn-more" class="learnmore-btn">Learn more</a>
+        </div>
+        <img src="download (2).png" alt="Quizizz Animation">
+    </div>
+    <div id="learn-more" class="learn-more">
+        <h2>Learn More About Quizz</h2>
+        <p>Quizz is an innovative platform designed to make learning more engaging and interactive. Whether you're a teacher, student, or professional, Quizz offers tools and features that cater to your needs.</p>
+        <h3>Features</h3>
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">📝</span>
+                <div>
+                    <h4>Easy Quiz Creation</h4>
+                    <p>Create quizzes with various question types including multiple choice, true/false, and short answer.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎨</span>
+                <div>
+                    <h4>Engaging Content</h4>
+                    <p>Add multimedia content like images, videos, and audio clips to keep your audience engaged.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📊</span>
+                <div>
+                    <h4>Real-Time Analytics</h4>
+                    <p>Track your progress with real-time analytics and gain insights into your performance.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🤝</span>
+                <div>
+                    <h4>Collaboration</h4>
+                    <p>Collaborate with others to create quizzes and share them with your peers.</p>
+                </div>
+            </div>
+        </div>
+        
+        <P>Learning with Quizz</p>
+        <p>Our platform leverages AI to provide personalized learning experiences, helping you achieve your educational goals more efficiently. Join Quizz today and transform the way you learn and teach.</p>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Quizz. All rights reserved.</p>
+        <p>Contact us: <a href="tel:+1234567890">+1 (234) 567-890</a> | <a href="mailto:support@quizizz.com">support@quizizz.com</a></p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">
+                <img src="fb.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="tw.jpeg" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="inst.jpeg" alt="Instagram">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="link.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
